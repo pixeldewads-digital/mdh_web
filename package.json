@@ -11,11 +11,11 @@
 
  "scripts": { 
 
-   "dev": "vite --host :: --port 3000", 
+   "dev": "vite --host 127.0.0.1 --port 3000",
 
-   "build": "node tools/generate-llms.js || true && vite build", 
+   "build": "vite build",
 
-   "preview": "vite preview --host :: --port 3000" 
+   "preview": "vite preview --host 127.0.0.1 --port 3000"
 
  }, 
 

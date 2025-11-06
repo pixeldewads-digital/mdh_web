@@ -13,9 +13,7 @@ export const useProducts = () => {
 
      price: 49, 
 
-     description: 'A beautifully designed digital planner that brings 
-
-structure and serenity to your daily workflow.', 
+     description: 'A beautifully designed digital planner that brings structure and serenity to your daily workflow.',
 
      image: 
 
@@ -49,9 +47,7 @@ structure and serenity to your daily workflow.',
 
      price: 99, 
 
-     description: 'Complete collection of templates, planners, and tools for 
-
-a fully harmonized digital workspace.', 
+     description: 'Complete collection of templates, planners, and tools for a fully harmonized digital workspace.',
 
      image: 
 
@@ -81,9 +77,7 @@ a fully harmonized digital workspace.',
 
      price: 149, 
 
-     description: 'Pre-built n8n workflows and templates to automate your 
-
-most repetitive tasks instantly.', 
+     description: 'Pre-built n8n workflows and templates to automate your most repetitive tasks instantly.',
 
      image: 
 

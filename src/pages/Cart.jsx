@@ -7,9 +7,9 @@ import { motion } from 'framer-motion';
 
 import { Link, useNavigate } from 'react-router-dom'; 
 
-import { Button } from '@/components/ui/button'; 
+import { Button } from '../components/ui/button';
 
-import { useCart } from '@/hooks/useCart'; 
+import { useCart } from '../hooks/useCart';
 
 import { Trash2, Plus, Minus } from 'lucide-react'; 
 

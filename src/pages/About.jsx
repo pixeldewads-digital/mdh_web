@@ -7,86 +7,42 @@ import { motion } from 'framer-motion';
 
 import { Link } from 'react-router-dom'; 
 
-import { Button } from '@/components/ui/button'; 
+import { Button } from '../components/ui/button';
 
-import { Heart, Lightbulb, Target } from 'lucide-react'; 
+import { Heart, Lightbulb, Target } from 'lucide-react';
 
-const About = () => { 
+const About = () => {
+  const timeline = [
+    { year: '2020', event: 'Founded MDH with a vision for digital harmony' },
+    { year: '2021', event: 'Launched first digital planner collection' },
+    { year: '2022', event: 'Expanded into automation systems and consulting' },
+    { year: '2023', event: 'Served 500+ clients across 20 countries' },
+    { year: '2024', event: 'Introduced premium client solutions and LMS platform' },
+  ];
 
- const timeline = [ 
+  const values = [
+    {
+      icon: Heart,
+      title: 'Calm',
+      description: 'We believe productivity should feel peaceful, not frantic. Every solution we create prioritizes mental clarity.',
+    },
+    {
+      icon: Lightbulb,
+      title: 'System',
+      description: 'Structure brings freedom. Our systematic approach ensures consistency, reliability, and sustainable growth.',
+    },
+    {
+      icon: Target,
+      title: 'Harmony',
+      description: 'Balance is everything. We design digital experiences that integrate seamlessly into your life and work.',
+    },
+  ];
 
-   { year: '2020', event: 'Founded MDH with a vision for digital harmony' }, 
-
-   { year: '2021', event: 'Launched first digital planner collection' }, 
-
-   { year: '2022', event: 'Expanded into automation systems and consulting' 
-
-}, 
-
-   { year: '2023', event: 'Served 500+ clients across 20 countries' }, 
-
-   { year: '2024', event: 'Introduced premium client solutions and LMS 
-
-platform' } 
-
- ]; 
-
- const values = [ 
-
-   { 
-
-     icon: Heart, 
-
-     title: 'Calm', 
-
-     description: 'We believe productivity should feel peaceful, not 
-
-frantic. Every solution we create prioritizes mental clarity.' 
-
-   }, 
-
-   { 
-
-     icon: Lightbulb, 
-
-     title: 'System', 
-
-     description: 'Structure brings freedom. Our systematic approach ensures 
-
-consistency, reliability, and sustainable growth.' 
-
-   }, 
-
-   { 
-
-     icon: Target, 
-
-     title: 'Harmony', 
-
- 
- 
-
-     description: 'Balance is everything. We design digital experiences that 
-
-integrate seamlessly into your life and work.' 
-
-   } 
-
- ]; 
-
- return ( 
-
-   <> 
-
-     <Helmet> 
-
-       <title>About - Maharani Digital Hub</title> 
-
-       <meta name="description" content="Learn about Ika Maharani Ratri and 
-
-the philosophy behind Maharani Digital Hub. Calm productivity, systematic 
-
-excellence, and digital harmony." /> 
+  return (
+    <>
+      <Helmet>
+        <title>About - Maharani Digital Hub</title>
+        <meta name="description" content="Learn about Ika Maharani Ratri and the philosophy behind Maharani Digital Hub. Calm productivity, systematic excellence, and digital harmony." />
 
      </Helmet> 
 

@@ -7,106 +7,55 @@ import { motion } from 'framer-motion';
 
 import { Mail, MapPin, Phone } from 'lucide-react'; 
 
-import { Button } from '@/components/ui/button'; 
+import { Button } from '../components/ui/button';
 
-import { useToast } from '@/components/ui/use-toast'; 
+import { useToast } from '../components/ui/use-toast';
 
-const Contact = () => { 
+const Contact = () => {
+  const { toast } = useToast();
 
- const { toast } = useToast(); 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
- const [formData, setFormData] = useState({ 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const contacts = JSON.parse(localStorage.getItem('mdh_contacts') || '[]');
+    contacts.push({
+      ...formData,
+      timestamp: new Date().toISOString(),
+    });
+    localStorage.setItem('mdh_contacts', JSON.stringify(contacts));
+    toast({
+      title: 'Message Sent! ✨',
+      description: "We'll get back to you within 24 hours.",
+    });
 
-   name: '', 
+    setFormData({ name: '', email: '', message: '' });
+  };
 
-   email: '', 
+  return (
+    <>
+      <Helmet>
+        <title>Contact - Maharani Digital Hub</title>
+        <meta name="description" content="Get in touch with Maharani Digital Hub. Let's discuss how we can bring digital harmony to your workflow." />
+      </Helmet>
 
-   message: '' 
-
- }); 
-
- const handleSubmit = (e) => { 
-
-   e.preventDefault(); 
-
-   const contacts = JSON.parse(localStorage.getItem('mdh_contacts') || 
-
-'[]'); 
-
-   contacts.push({ 
-
-     ...formData, 
-
-     timestamp: new Date().toISOString() 
-
-   }); 
-
-   localStorage.setItem('mdh_contacts', JSON.stringify(contacts)); 
-
-   toast({ 
-     title: "Message Sent! ✨", 
-
-     description: "We'll get back to you within 24 hours.", 
-
-   }); 
-
- 
- 
- 
- 
-   
- 
- 
-
-   setFormData({ name: '', email: '', message: '' }); 
-
- }; 
-
- return ( 
-
-   <> 
-
-     <Helmet> 
-
-       <title>Contact - Maharani Digital Hub</title> 
-
-       <meta name="description" content="Get in touch with Maharani Digital 
-
-Hub. Let's discuss how we can bring digital harmony to your workflow." /> 
-
-     </Helmet> 
-
-     <section className="py-20 bg-gradient-to-br from-[#F6F4F0] 
-
-to-[#CBB279]/10"> 
-
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
-
-         <motion.div 
-
-           initial={{ opacity: 0, y: 30 }} 
-
-           animate={{ opacity: 1, y: 0 }} 
-
-           transition={{ duration: 0.6 }} 
-
-           className="text-center" 
-
-         > 
-
-           <h1 className="heading-font text-5xl md:text-6xl font-bold 
-
-text-[#3B3A39] mb-6"> 
-
-             Let's Connect 
-
-           </h1> 
-
-           <p className="text-xl text-[#3B3A39]/70 max-w-3xl mx-auto"> 
-
-             Ready to elevate your digital workflow? We'd love to hear from 
-
-you. 
+      <section className="py-20 bg-gradient-to-br from-[#F6F4F0] to-[#CBB279]/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="heading-font text-5xl md:text-6xl font-bold text-[#3B3A39] mb-6">
+              Let's Connect
+            </h1>
+            <p className="text-xl text-[#3B3A39]/70 max-w-3xl mx-auto">
+              Ready to elevate your digital workflow? We'd love to hear from you.
 
            </p> 
 

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 import { Link } from 'react-router-dom'; 
 
-import { useBlogPosts } from '@/hooks/useBlogPosts'; 
+import { useBlogPosts } from '../hooks/useBlogPost';
 
 const Blog = () => { 
 

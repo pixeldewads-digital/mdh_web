@@ -7,79 +7,45 @@ import { motion } from 'framer-motion';
 
 import { Link, useNavigate } from 'react-router-dom'; 
 
-import { Button } from '@/components/ui/button'; 
+import { Button } from '../components/ui/button';
 
-import { useToast } from '@/components/ui/use-toast'; 
+import { useToast } from '../components/ui/use-toast';
 
-const Register = () => { 
+const Register = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
 
- const navigate = useNavigate(); 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
 
- const { toast } = useToast(); 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (formData.password !== formData.confirmPassword) {
+      toast({
+        title: 'Error',
+        description: "Passwords don't match",
+        variant: 'destructive',
+      });
+      return;
+    }
+    toast({
+      title: 'Account Created! ✨',
+      description: 'Welcome to Maharani Digital Hub.',
+    });
+    navigate('/login');
+  };
 
- const [formData, setFormData] = useState({ 
-
-   name: '', 
-
-   email: '', 
-
-   password: '', 
-
-   confirmPassword: '' 
-
- }); 
-
- const handleSubmit = (e) => { 
-
-   e.preventDefault(); 
-
-   if (formData.password !== formData.confirmPassword) { 
-
-     toast({ 
-
-       title: "Error", 
-
-       description: "Passwords don't match", 
-
-       variant: "destructive" 
-
-     }); 
-
-     return; 
-
-   } 
-
-   toast({ 
-     title: "Account Created! ✨", 
-
-     description: "Welcome to Maharani Digital Hub.", 
-
-   }); 
-
-   navigate('/login'); 
-
- 
- 
- 
- 
-
- }; 
-
- return ( 
-
-   <> 
-
-     <Helmet> 
-
-       <title>Register - Maharani Digital Hub</title> 
-
-       <meta name="description" content="Create your client account" /> 
-
-     </Helmet> 
-
-     <section className="py-24 bg-white min-h-[80vh] flex items-center 
-
-justify-center"> 
+  return (
+    <>
+      <Helmet>
+        <title>Register - Maharani Digital Hub</title>
+        <meta name="description" content="Create your client account" />
+      </Helmet>
+      <section className="py-24 bg-white min-h-[80vh] flex items-center justify-center">
 
        <div className="max-w-md w-full mx-auto px-4 sm:px-6 lg:px-8"> 
 

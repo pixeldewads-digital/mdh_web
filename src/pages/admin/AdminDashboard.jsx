@@ -11,11 +11,11 @@ import { LayoutDashboard, Newspaper, Files, Store, Image as ImageIcon,
 
 Users, Shield, LogOut } from 'lucide-react'; 
 
-import { Button } from '@/components/ui/button'; 
+import { Button } from '../../components/ui/button';
 
-import { TeamManagement } from '@/components/admin/TeamManagement'; 
+import { TeamManagement } from '../../components/admin/TeamManagement';
 
-import { useToast } from '@/components/ui/use-toast'; 
+import { useToast } from '../../components/ui/use-toast';
 
 const AdminDashboard = () => { 
 
@@ -54,8 +54,7 @@ const AdminDashboard = () => {
    toast({ 
      title: "🚧 Feature in Progress", 
 
-     description: "This module is under construction. You can request it in 
-your next prompt! 🚀", 
+     description: "This module is under construction. You can request it in your next prompt! 🚀",
 
    }); 
 
@@ -156,11 +155,7 @@ gap-8">
 
 hover:shadow-lg transition-shadow cursor-pointer" 
 
-                 onClick={module.component ? () => toast({title: "Team 
-
-Management Loaded!", description: "This module is now active below."}) : 
-
-genericToast} 
+                 onClick={module.component ? () => toast({title: "Team Management Loaded!", description: "This module is now active below."}) : genericToast}
 
                > 
 

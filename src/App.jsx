@@ -3,57 +3,55 @@ import React from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 
-import { Toaster } from '@/components/ui/toaster'; 
+import { Toaster } from './components/ui/toaster';
 
-import Navigation from '@/components/Navigation'; 
+import Navigation from './components/Navigation';
 
-import Footer from '@/components/Footer'; 
+import Footer from './components/Footer';
 
-import Home from '@/pages/Home'; 
+import Home from './pages/Home';
 
-import About from '@/pages/About'; 
+import About from './pages/About';
 
-import Contact from '@/pages/Contact'; 
+import Contact from './pages/Contact';
 
-import Shop from '@/pages/Shop'; 
+import Shop from './pages/Shop';
 
-import ProductDetail from '@/pages/ProductDetail'; 
+import ProductDetail from './pages/ProductDetail';
 
-import Cart from '@/pages/Cart'; 
+import Cart from './pages/Cart';
 
-import Checkout from '@/pages/Checkout'; 
+import Checkout from './pages/Checkout';
 
-import ThankYou from '@/pages/ThankYou'; 
+import ThankYou from './pages/ThankYou';
 
-import ClientPortal from '@/pages/ClientPortal'; 
+import ClientPortal from './pages/ClientPortal';
 
-import Login from '@/pages/Login'; 
+import Login from './pages/Login';
 
-import Register from '@/pages/Register'; 
+import Register from './pages/Register';
 
-import Blog from '@/pages/Blog'; 
+import Blog from './pages/Blog';
 
-import BlogPost from '@/pages/BlogPost'; 
+import BlogPost from './pages/BlogPost';
 
-import NotFound from '@/pages/NotFound'; 
+import NotFound from './pages/NotFound';
 
-import Maintenance from '@/pages/Maintenance'; 
+import Maintenance from './pages/Maintenance';
 
-import ComingSoon from '@/pages/ComingSoon'; 
+import ComingSoon from './pages/ComingSoon';
 
-import Academy from '@/pages/Academy'; 
+import Academy from './pages/Academy';
 
-import CourseDetail from '@/pages/CourseDetail'; 
+import CourseDetail from './pages/CourseDetail';
 
-import StudentDashboard from '@/pages/StudentDashboard'; 
+import StudentDashboard from './pages/StudentDashboard';
 
-import AdminLogin from '@/pages/admin/AdminLogin'; 
+import AdminLogin from './pages/admin/AdminLogin';
 
- 
+import AdminDashboard from './pages/admin/AdminDashboard';
 
-import AdminDashboard from '@/pages/admin/AdminDashboard'; 
-
-import AgencyHub from '@/pages/AgencyHub'; 
+import AgencyHub from './pages/AgencyHub';
 
 function App() { 
 

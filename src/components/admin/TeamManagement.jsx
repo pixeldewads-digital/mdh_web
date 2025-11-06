@@ -1,11 +1,11 @@
 
 import React from 'react'; 
 
-import { Button } from '@/components/ui/button'; 
+import { Button } from '../ui/button';
 
-import { Switch } from '@/components/ui/switch'; 
+import { Switch } from '../ui/switch';
 
-import { useToast } from '@/components/ui/use-toast'; 
+import { useToast } from '../ui/use-toast';
 
 import { PlusCircle, Trash2 } from 'lucide-react'; 
 
@@ -46,8 +46,7 @@ export const TeamManagement = () => {
      toast({ 
        title: "🚧 Feature in Progress", 
 
-       description: "This functionality is under construction. You can 
-request it in your next prompt! 🚀", 
+       description: "This functionality is under construction. You can request it in your next prompt! 🚀",
 
      }); 
 
@@ -137,9 +136,7 @@ mb-4">{role}</h4>
 
 gap-4"> 
 
-                               {['Read', 'Edit', 'Publish', 'Delete'].map(p 
-
-=> ( 
+                               {['Read', 'Edit', 'Publish', 'Delete'].map(p => (
 
                                    <div key={p} className="flex items-center 
 

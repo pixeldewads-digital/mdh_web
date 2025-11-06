@@ -11,9 +11,7 @@ export const useCourses = () => {
 
      title: 'Calm Productivity Masterclass', 
 
-     description: 'A comprehensive program to master the art of calm 
-
-productivity, transforming your workflow and mindset.', 
+     description: 'A comprehensive program to master the art of calm productivity, transforming your workflow and mindset.',
 
      image: 
 
@@ -23,25 +21,15 @@ productivity, transforming your workflow and mindset.',
 
      lessons: [ 
 
-       { title: 'Module 1: The Philosophy of Calm Productivity', duration: 
+       { title: 'Module 1: The Philosophy of Calm Productivity', duration: '25 mins', content: 'Understanding the core principles.' },
 
-'25 mins', content: 'Understanding the core principles.' }, 
+       { title: 'Module 2: Designing Your Digital Sanctuary', duration: '45 mins', content: 'Setting up your tools for success.' },
 
-       { title: 'Module 2: Designing Your Digital Sanctuary', duration: '45 
+       { title: 'Module 3: Intentional Planning & Prioritization', duration: '35 mins', content: 'Focusing on what truly matters.' },
 
-mins', content: 'Setting up your tools for success.' }, 
+       { title: 'Module 4: Introduction to Automation', duration: '50 mins', content: 'Automating repetitive tasks with n8n.' },
 
-       { title: 'Module 3: Intentional Planning & Prioritization', duration: 
-
-'35 mins', content: 'Focusing on what truly matters.' }, 
-
-       { title: 'Module 4: Introduction to Automation', duration: '50 mins', 
-
-content: 'Automating repetitive tasks with n8n.' }, 
-
-       { title: 'Module 5: Maintaining Digital Harmony', duration: '20 
-
-mins', content: 'Long-term strategies for balance.' }, 
+       { title: 'Module 5: Maintaining Digital Harmony', duration: '20 mins', content: 'Long-term strategies for balance.' },
 
      ], 
 
@@ -68,9 +56,7 @@ mins', content: 'Long-term strategies for balance.' },
 
      title: 'n8n Automation Deep Dive', 
 
-     description: 'Become an automation expert with this in-depth course on 
-
-n8n, from basic workflows to advanced techniques.', 
+     description: 'Become an automation expert with this in-depth course on n8n, from basic workflows to advanced techniques.',
 
      image: 
 
@@ -80,21 +66,13 @@ n8n, from basic workflows to advanced techniques.',
 
      lessons: [ 
 
-       { title: 'Module 1: n8n Fundamentals', duration: '30 mins', content: 
+       { title: 'Module 1: n8n Fundamentals', duration: '30 mins', content: 'Getting started with nodes and workflows.' },
 
-'Getting started with nodes and workflows.' }, 
+       { title: 'Module 2: Advanced Workflow Logic', duration: '60 mins', content: 'Using functions, loops, and conditional logic.' },
 
-       { title: 'Module 2: Advanced Workflow Logic', duration: '60 mins', 
+       { title: 'Module 3: API Integrations', duration: '55 mins', content: 'Connecting to third-party services.' },
 
-content: 'Using functions, loops, and conditional logic.' }, 
-
-       { title: 'Module 3: API Integrations', duration: '55 mins', content: 
-
-'Connecting to third-party services.' }, 
-
-       { title: 'Module 4: Building a Personal CRM', duration: '75 mins', 
-
-content: 'A hands-on project.' }, 
+       { title: 'Module 4: Building a Personal CRM', duration: '75 mins', content: 'A hands-on project.' },
 
      ], 
 
@@ -118,9 +96,7 @@ content: 'A hands-on project.' },
 
      title: 'Digital Minimalism for Creatives', 
 
-     description: 'Declutter your digital life to create more space for 
-
-creativity and deep work.', 
+     description: 'Declutter your digital life to create more space for creativity and deep work.',
 
      image: 
 
@@ -130,18 +106,12 @@ creativity and deep work.',
 
      lessons: [ 
 
-       { title: 'Module 1: The Case for Digital Minimalism', duration: '20 
-
-mins', content: 'Why less is more.' }, 
+       { title: 'Module 1: The Case for Digital Minimalism', duration: '20 mins', content: 'Why less is more.' },
 
 
-       { title: 'Module 2: The Digital Declutter Process', duration: '40 
+       { title: 'Module 2: The Digital Declutter Process', duration: '40 mins', content: 'A step-by-step guide.' },
 
-mins', content: 'A step-by-step guide.' }, 
-
-       { title: 'Module 3: Curating Your Digital Toolkit', duration: '30 
-
-mins', content: 'Choosing tools with intention.' }, 
+       { title: 'Module 3: Curating Your Digital Toolkit', duration: '30 mins', content: 'Choosing tools with intention.' },
 
      ], 
 
