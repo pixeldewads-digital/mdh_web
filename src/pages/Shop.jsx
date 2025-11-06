@@ -7,12 +7,12 @@ import { motion } from 'framer-motion';
 
 import { Link } from 'react-router-dom'; 
 
-import { Button } from '@/components/ui/button'; 
+import { Button } from '../components/ui/button';
 
  
  
 
-import { useProducts } from '@/hooks/useProducts'; 
+import { useProducts } from '../hooks/useProducts';
 
 const Shop = () => { 
 

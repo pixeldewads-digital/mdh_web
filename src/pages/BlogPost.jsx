@@ -12,7 +12,7 @@ import { ArrowLeft } from 'lucide-react';
  
  
 
-import { useBlogPosts } from '@/hooks/useBlogPosts'; 
+import { useBlogPosts } from '../hooks/useBlogPost';
 
 const BlogPost = () => { 
 

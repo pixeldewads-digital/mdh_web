@@ -7,116 +7,55 @@ import { useNavigate } from 'react-router-dom';
 
 import { motion } from 'framer-motion'; 
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 
-"@/components/ui/tabs"; 
+import { Button } from '../components/ui/button';
+import { BarChart, FolderKanban, Zap, FileArchive, LogOut, Play, Pause } from 'lucide-react';
+import { useToast } from '../components/ui/use-toast';
 
- 
- 
+const AgencyHub = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-import { Button } from '@/components/ui/button'; 
+  useEffect(() => {
+    const userRole = localStorage.getItem('mdh_admin_role');
+    if (userRole !== 'Owner') {
+      toast({
+        title: 'Access Denied',
+        description: 'You must be an Owner to access the Agency Hub.',
+        variant: 'destructive',
+      });
+      navigate('/admin');
+    } else {
+      setIsLoggedIn(true);
+    }
+  }, [navigate, toast]);
 
-import { BarChart, FolderKanban, Zap, FileArchive, LogOut, Play, Pause } 
+  const handleLogout = () => {
+    localStorage.removeItem('mdh_admin_role');
+    navigate('/admin');
+  };
 
-from 'lucide-react'; 
+  const genericToast = () => {
+    toast({
+      title: '🚧 Feature in Progress',
+      description: 'This functionality is under construction. You can request it in your next prompt! 🚀',
+    });
+  };
 
-import { useToast } from '@/components/ui/use-toast'; 
+  const projectTasks = [
+    { task: 'Client Onboarding Automation', status: 'In Progress', priority: 'High', deadline: '2025-11-15', pic: 'Ika' },
+    { task: 'New Course Content Creation', status: 'Not Started', priority: 'Medium', deadline: '2025-11-20', pic: 'Jane' },
+    { task: 'Q4 Financial Report', status: 'Completed', priority: 'High', deadline: '2025-10-30', pic: 'Ika' },
+    { task: 'Update Brand Assets', status: 'In Progress', priority: 'Low', deadline: '2025-11-10', pic: 'John' },
+  ];
 
-const AgencyHub = () => { 
-
- const navigate = useNavigate(); 
-
- const { toast } = useToast(); 
-
- const [isLoggedIn, setIsLoggedIn] = useState(false); 
-
- useEffect(() => { 
-
-   const userRole = localStorage.getItem('mdh_admin_role'); 
-
-   if (userRole !== 'Owner') { 
-
-     toast({ 
-
-       title: "Access Denied", 
-
-       description: "You must be an Owner to access the Agency Hub.", 
-
-       variant: "destructive" 
-
-     }); 
-
-     navigate('/admin'); 
-
-   } else { 
-
-     setIsLoggedIn(true); 
-
-   } 
-
- }, [navigate, toast]); 
-
- const handleLogout = () => { 
-
-   localStorage.removeItem('mdh_admin_role'); 
-
-   navigate('/admin'); 
-
- }; 
-
- const genericToast = () => { 
-
-   toast({ 
-     title: "🚧 Feature in Progress", 
-
-     description: "This functionality is under construction. You can request 
-it in your next prompt! 🚀", 
-
-   }); 
-
- } 
-
- const projectTasks = [ 
-
- 
- 
- 
- 
- 
-
-   { task: "Client Onboarding Automation", status: "In Progress", priority: 
-
-"High", deadline: "2025-11-15", pic: "Ika" }, 
-
-   { task: "New Course Content Creation", status: "Not Started", priority: 
-
-"Medium", deadline: "2025-11-20", pic: "Jane" }, 
-
-   { task: "Q4 Financial Report", status: "Completed", priority: "High", 
-
-deadline: "2025-10-30", pic: "Ika" }, 
-
-   { task: "Update Brand Assets", status: "In Progress", priority: "Low", 
-
-deadline: "2025-11-10", pic: "John" }, 
-
- ]; 
-
- const automationLogs = [ 
-
-   { timestamp: "2025-11-05 10:00:15", workflow: "New Subscriber", status: 
-
-"Success" }, 
-
-   { timestamp: "2025-11-05 09:45:03", workflow: "Daily Backup", status: 
-
-"Success" }, 
-
-   { timestamp: "2025-11-04 18:30:50", workflow: "Client Invoice", status: 
-
-"Failed" }, 
-
- ]; 
+  const automationLogs = [
+    { timestamp: '2025-11-05 10:00:15', workflow: 'New Subscriber', status: 'Success' },
+    { timestamp: '2025-11-05 09:45:03', workflow: 'Daily Backup', status: 'Success' },
+    { timestamp: '2025-11-04 18:30:50', workflow: 'Client Invoice', status: 'Failed' },
+  ];
 
  if (!isLoggedIn) return null; 
 
@@ -260,13 +199,7 @@ border-[#F6F4F0]">
 
                          <td className="p-4 font-medium">{item.task}</td> 
 
-                         <td className="p-4"><span className={`px-2 py-1 
-
-text-xs rounded-full ${item.status === 'Completed' ? 'bg-green-100 
-
-text-green-700' : 'bg-yellow-100 
-
-text-yellow-700'}`}>{item.status}</span></td> 
+                         <td className="p-4"><span className={`px-2 py-1 text-xs rounded-full ${item.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}`}>{item.status}</span></td>
 
                          <td className="p-4"><span 
 

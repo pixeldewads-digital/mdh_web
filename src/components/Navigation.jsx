@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { Menu, X, ShoppingCart } from 'lucide-react'; 
 
-import { useCart } from '@/hooks/useCart'; 
+import { useCart } from '../hooks/useCart';
 
 const Navigation = () => { 
 

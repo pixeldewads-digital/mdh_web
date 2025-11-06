@@ -7,15 +7,15 @@ import { motion } from 'framer-motion';
 
 import { useParams, Link } from 'react-router-dom'; 
 
-import { Button } from '@/components/ui/button'; 
+import { Button } from '../components/ui/button';
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from 
 
-"@/components/ui/accordion" 
+"../components/ui/accordion"
 
-import { Progress } from "@/components/ui/progress" 
+import { Progress } from "../components/ui/progress"
 
-import { useCourses } from '@/hooks/useCourses'; 
+import { useCourses } from '../hooks/useCourses';
 
 import { ArrowLeft, Download, PlayCircle } from 'lucide-react'; 
 

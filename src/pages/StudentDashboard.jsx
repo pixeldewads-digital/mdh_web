@@ -7,67 +7,33 @@ import { motion } from 'framer-motion';
 
 import { Link } from 'react-router-dom'; 
 
-import { Button } from '@/components/ui/button'; 
+import { Button } from '../components/ui/button';
+import { Progress } from '../components/ui/progress';
+import { useCourses } from '../hooks/useCourses';
+import { BookOpen, Award } from 'lucide-react';
 
-import { Progress } from "@/components/ui/progress" 
+const StudentDashboard = () => {
+  const { courses } = useCourses();
 
-import { useCourses } from '@/hooks/useCourses'; 
-
-import { BookOpen, Award } from 'lucide-react'; 
-
-const StudentDashboard = () => { 
-
- const { courses } = useCourses(); 
-
- return ( 
-
-   <> 
-
-     <Helmet> 
-
-       <title>My Dashboard - MDH Academy</title> 
-
-       <meta name="description" content="Track your course progress and 
-
-achievements." /> 
-
-     </Helmet> 
-
-     <section className="py-20 bg-gradient-to-br from-[#F6F4F0] 
-
-to-[#CBB279]/10"> 
-
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
-
-         <motion.div 
-
-           initial={{ opacity: 0, y: 30 }} 
-
-           animate={{ opacity: 1, y: 0 }} 
-
- 
- 
- 
- 
- 
-
-           transition={{ duration: 0.6 }} 
-
-           className="text-center" 
-
-         > 
-
-           <h1 className="heading-font text-5xl md:text-6xl font-bold 
-
-text-[#3B3A39] mb-6"> 
-
-             My Dashboard 
-
-           </h1> 
-
-           <p className="text-xl text-[#3B3A39]/70 max-w-3xl mx-auto"> 
-
-             Welcome back! Here's an overview of your learning journey. 
+  return (
+    <>
+      <Helmet>
+        <title>My Dashboard - MDH Academy</title>
+        <meta name="description" content="Track your course progress and achievements." />
+      </Helmet>
+      <section className="py-20 bg-gradient-to-br from-[#F6F4F0] to-[#CBB279]/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="heading-font text-5xl md:text-6xl font-bold text-[#3B3A39] mb-6">
+              My Dashboard
+            </h1>
+            <p className="text-xl text-[#3B3A39]/70 max-w-3xl mx-auto">
+              Welcome back! Here's an overview of your learning journey.
 
            </p> 
 

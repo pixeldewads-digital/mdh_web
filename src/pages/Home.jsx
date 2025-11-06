@@ -9,128 +9,59 @@ import { Link } from 'react-router-dom';
 
 import { ArrowRight, Sparkles, Zap, Target } from 'lucide-react'; 
 
-import { Button } from '@/components/ui/button'; 
+import { Button } from '../components/ui/button';
 
-import NewsletterSignup from '@/components/NewsletterSignup'; 
+import NewsletterSignup from '../components/NewsLetterSignUp';
 
-const Home = () => { 
+const Home = () => {
+  const offerings = [
+    {
+      title: 'Digital Products',
+      description: 'Thoughtfully designed planners, templates, and tools to bring calm structure to your workflow.',
+      icon: Sparkles,
+    },
+    {
+      title: 'Automation Systems',
+      description: 'Custom n8n workflows that eliminate repetitive tasks and create seamless digital harmony.',
+      icon: Zap,
+    },
+    {
+      title: 'Client Solutions',
+      description: 'Tailored digital strategies and systems designed to elevate your business operations.',
+      icon: Target,
+    },
+  ];
 
- const offerings = [ 
+  const features = [
+    { title: 'Simplify', description: 'Strip away complexity and focus on what truly matters' },
+    { title: 'Systemize', description: 'Build structured workflows that work effortlessly' },
+    { title: 'Perform', description: 'Execute with clarity and consistent excellence' },
+    { title: 'Thrive', description: 'Achieve sustainable growth through digital harmony' },
+  ];
 
-   { 
+  const testimonials = [
+    {
+      name: 'Sarah Chen',
+      role: 'Creative Director',
+      text: 'MDH transformed our chaotic workflow into a calm, productive system. The automation alone saved us 15 hours per week.',
+    },
+    {
+      name: 'Marcus Rodriguez',
+      role: 'Entrepreneur',
+      text: 'The digital planner is a game-changer. It brings structure without feeling restrictive—exactly what I needed.',
+    },
+    {
+      name: 'Amelia Foster',
+      role: 'Consultant',
+      text: 'Working with Ika was like finding a digital sanctuary. Her approach to automation is both elegant and effective.',
+    },
+  ];
 
-     title: 'Digital Products', 
-
-     description: 'Thoughtfully designed planners, templates, and tools to 
-
-bring calm structure to your workflow.', 
-
-     icon: Sparkles 
-
-   }, 
-
-   { 
-
-     title: 'Automation Systems', 
-
-     description: 'Custom n8n workflows that eliminate repetitive tasks and 
-
-create seamless digital harmony.', 
-
-     icon: Zap 
-
-   }, 
-
-   { 
-
-     title: 'Client Solutions', 
-
-     description: 'Tailored digital strategies and systems designed to 
-
-elevate your business operations.', 
-
-     icon: Target 
-
-   } 
-
- ]; 
-
- const features = [ 
-
-   { title: 'Simplify', description: 'Strip away complexity and focus on 
-
-what truly matters' }, 
-
-   { title: 'Systemize', description: 'Build structured workflows that work 
-
-effortlessly' }, 
-
-   { title: 'Perform', description: 'Execute with clarity and consistent 
-
-excellence' }, 
-
- 
- 
-
-   { title: 'Thrive', description: 'Achieve sustainable growth through 
-
-digital harmony' } 
-
- ]; 
-
- const testimonials = [ 
-
-   { 
-
-     name: 'Sarah Chen', 
-
-     role: 'Creative Director', 
-
-     text: 'MDH transformed our chaotic workflow into a calm, productive 
-
-system. The automation alone saved us 15 hours per week.' 
-
-   }, 
-
-   { 
-
-     name: 'Marcus Rodriguez', 
-
-     role: 'Entrepreneur', 
-
-     text: 'The digital planner is a game-changer. It brings structure 
-
-without feeling restrictive—exactly what I needed.' 
-
-   }, 
-
-   { 
-
-     name: 'Amelia Foster', 
-
-     role: 'Consultant', 
-
-     text: 'Working with Ika was like finding a digital sanctuary. Her 
-
-approach to automation is both elegant and effective.' 
-
-   } 
-
- ]; 
-
- return ( 
-
-   <> 
-
-     <Helmet> 
-
-       <title>Maharani Digital Hub - Elevating Digital Harmony</title> 
-
-       <meta name="description" content="Transform your digital workflow 
-
-with calm productivity, premium clarity, and structured harmony. Digital 
-
-products, automation systems, and client solutions." /> 
+  return (
+    <>
+      <Helmet>
+        <title>Maharani Digital Hub - Elevating Digital Harmony</title>
+        <meta name="description" content="Transform your digital workflow with calm productivity, premium clarity, and structured harmony. Digital products, automation systems, and client solutions." />
 
      </Helmet> 
 
